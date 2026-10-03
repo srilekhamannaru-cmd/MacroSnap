@@ -12,7 +12,7 @@ from prompts import (
 )
 
 
-MODEL_NAME = "gemini-3-flash-preview"
+MODEL_NAME = "gemini-3.6-flash"
 
 
 st.set_page_config(
@@ -295,6 +295,21 @@ if user_input:
 st.divider()
 
 st.subheader("📧 Email Summary")
+if st.button("Test Gmail"):
+    try:
+        success, info = send_email(
+            st.session_state.email,
+            "MacroSnap Gmail Test",
+            "This is a test email from MacroSnap. Gmail SMTP is working successfully!"
+        )
+
+        if success:
+            st.success("Gmail is working! 📧🎉")
+        else:
+            st.error(info)
+
+    except Exception as error:
+        st.error(f"Gmail test failed: {error}")
 
 
 if st.button("Send Summary to Email"):
