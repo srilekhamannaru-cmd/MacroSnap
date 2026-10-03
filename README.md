@@ -1,6 +1,9 @@
 # 🥗 MacroSnap
 
 MacroSnap is an AI-powered nutrition chatbot that uses Google Gemini to analyze food from text descriptions or photos and estimate calories and macronutrients.
+## 🚀 Live Demo
+
+👉 [Try MacroSnap Live](https://macrosnap-akqcaqdxc4cf5s23u7fcyv.streamlit.app/)
 
 ## Features
 
