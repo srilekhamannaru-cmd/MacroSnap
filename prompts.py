@@ -9,8 +9,15 @@ WELCOME_MESSAGE_TEMPLATE = (
 )
 
 SUMMARY_REQUEST_PROMPT = (
-    "Summarize all meals discussed in this conversation. "
-    "Give only the meal name and its calories, protein, carbohydrates, and fat. "
-    "Do not add introductions, explanations, or extra sentences. "
-    "Keep the summary short and clean."
+    "Create a clean nutrition summary of all meals discussed in this conversation.\n\n"
+    "Use exactly this format:\n\n"
+    "🥗 MacroSnap Nutrition Summary\n\n"
+    "Meal Name\n"
+    "Calories: value\n"
+    "Protein: value\n"
+    "Carbohydrates: value\n"
+    "Fat: value\n\n"
+    "Repeat the same format for each meal.\n"
+    "Do not use bullet symbols, markdown formatting, tables, or special characters.\n"
+    "Do not add introductions, explanations, conclusions, or extra sentences."
 )
